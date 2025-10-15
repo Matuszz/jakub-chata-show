@@ -1,0 +1,62 @@
+.main-reservation{
+  height: 200px;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.reservation-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  flex-direction: column;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.main-reservation img{
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.airbnb-text{
+  height: 60%;
+}
+.airbnb-text:hover{
+  height: 55%;
+}
+.booking-text{
+  height: 50%;
+}
+.booking-text:hover{
+  height: 45%;
+}
+.airbnb-icon{
+  display: none;
+  height: 80%;
+  transition: all 0.5s ease-in-out;
+}
+.booking-icon{
+  display: none;
+  height: 70%;
+  transition: all 0.5s ease-in-out;
+}
+.booking-icon:hover{
+  height: 60%;
+}
+.airbnb-icon:hover{
+  height: 70%;
+}
+@media (max-width: 768px){
+  .airbnb-icon, .booking-icon{
+  display: block;
+  }
+  .airbnb-text, .booking-text{
+    display: none;
+  }
+  .main-reservation{
+    gap: 5%;
+    margin-right: 40px;
+  }
+}

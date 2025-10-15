@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galéria</title>
+  <link rel="stylesheet" href="styles/grid-gallery.css">
+</head>
+<body>
+  <div class="gallery-container" id="gallery-container">
+    <img src="gallery/img-1.jpg" alt="">
+  </div>
+<script>
+
+  function generateGridGallery() {
+    const gridGallery = document.getElementById("gallery-container");
+    gridGallery.innerHTML = "";
+    for(let i=1; i <= 80; i++){
+      gridGallery.innerHTML += `<img src="gallery/img-${i}.jpg" alt="">`;
+    }
+    for(let i=81; i <= 124; i++){
+      gridGallery.innerHTML += `<img src="gallery2/img-${i}.jpg" alt="">`;
+    }
+  }
+  window.onload = generateGridGallery();
+
+const boxes = document.querySelectorAll('img');
+
+window.addEventListener('scroll', () => {
+  boxes.forEach(box => {
+    const rect = box.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      box.classList.add('show');
+    }
+  });
+});
+</script>  
+</body>
+</html>

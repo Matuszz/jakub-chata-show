@@ -1,0 +1,47 @@
+.gallery-container {
+  height: 600px;        /* výška viditeľnej časti */
+  overflow: hidden;     /* všetko mimo boxu sa skryje */
+  border-radius: 16px;  /* zaoblené rohy */
+  position: relative;
+  margin: 0 15px;
+}
+.gallery-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scroll 100s linear infinite;
+  cursor: pointer;
+}
+.gallery-div:hover{
+  animation-play-state: paused;
+}
+.scroll-down {
+  animation: scroll-down 100s linear infinite;
+}
+
+.gallery-imgs {
+  width: 200px;
+  object-fit: contain;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.main-gallery-container{
+  display: flex;
+  justify-content: center;
+}
+/* animácia scrollovania */
+@keyframes scroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes scroll-down {
+  0%   { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+.gallery-text-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+

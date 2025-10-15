@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chata Jakub</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/gallery.css">
+  <link rel="stylesheet" href="styles/info.css">
+  <link rel="stylesheet" href="styles/adress.css">
+  <link rel="stylesheet" href="styles/hamburger-menu.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/reservation.css">
+  <link rel="stylesheet" href="styles/show-contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-div">
+      <img class="logo" src="loga/logo.svg" alt="">
+    </div>
+    <div class="menu-div">
+      <a href="gallery.html" class="gallery-header underline-animation display-for"><span>Galéria</span></a>
+      <a class="contact-header underline-animation display-for" onclick="translateX()"><span>Kontakt</span></a>
+      <button class="reservation-header-button display"><span>Rezervácia</span></button>
+      <div class="hamburger" onclick="showMenu()">☰</div>
+    </div>
+  </header>
+  <div id="show-menu" class="show-menu">
+    <div id="close-menu" class="close-menu" onclick="closeMenu()"><span id="rotate" class="x-rotate" onclick="rotate()">×</span></div>
+    <a href="gallery.html" class="hbg-menu-text"><span>Galéria</span></a>
+    <a class="hbg-menu-text" onclick="translateX()"><span>Kontakt</span></a>
+    <a class="hbg-menu-text"><span>Rezervácia ↗</span></a>
+    <div class="logos-menu">
+      <img class="airbnb-icon-menu" src="loga/airbnb-logo.png" style="width: 170px;" alt="">
+      <img class="booking-icon-menu" src="loga/booking-logo.png" style="width: 120px;">
+    </div>
+  </div>
+
+  <div class="show-contact">
+    <div class="container-x">
+      <div class="symbol-x" onclick="closeContact()"><span class="rotationX" id="rotationX" onclick="rotationX()">×</span></div>
+      <h1>KONTAKT</h1>
+      <h1>Jakub Barnáš</h1>
+      <h2><span>✆</span>+421 949 031 295</h2>
+      <h2><span style="font-weight: 300;">@</span>barnas.jakub@gmail.com</h2>
+    </div>
+  </div>
+
+  <div class="main-hero-div">
+    <div class="img-div">
+      <img class="main-hero-img" src="gallery/img-7.jpg" alt="">
+    </div>
+    <div class="hero-main-text">
+      <h1 class="main-heading-h1">Premenili sme sen na realitu</h1>
+      <p class="regular-text">Ponúkame krásnu chatu v ktorej môžete stráviť svoje dni.</p>
+      <div class="main-buttons">
+        <button class="reservation"><span>Rezervácia</span></button>
+        <button class="contact" onclick="translateX()">Kontakt</button>
+      </div>
+    </div>
+  </div>
+<section>
+  <div class="gallery">
+    <div class="gallery-text-div">
+      <h1>Naša galéria</h1>
+    </div>
+    <div class="main-gallery-container">
+      <div class="gallery-container display">
+        <div class="gallery-div" id="for-1">
+        </div>
+      </div>
+      <div class="gallery-container display">
+        <div class="gallery-div scroll-down" id="for-2">
+        </div>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery-div" id="for-3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="reservation-div">
+    <h1>Rezervácia ↗</h1>
+    <div class="main-reservation">
+        <img class="airbnb-text" src="loga/airbnb-logo-text.png">
+        <img class="booking-text" src="loga/booking-logo-text.png">
+        <img class="airbnb-icon" src="loga/airbnb-logo.png" alt="">
+        <img class="booking-icon" src="loga/booking-logo.png" alt="">
+    </div>
+  </div>
+</section>
+<section>
+  <div class="info-container">
+    <div class="info-img">
+      <img class="img-next-contact" src="gallery/img-22.jpg" alt="">
+    </div>
+    <div class="contact-container">
+        <h1>Zanechajte nám správu</h1>
+        <p>Budeme veľmi radi, ak sa nás spýtate na otázky, ktoré máte pre nás</p>
+      <form>
+        <div class="info">
+          <input type="text" placeholder="Meno" name="name" required>
+          <input type="text" placeholder="Priezvisko" name="postname" required>
+        </div>
+        <div class="info">
+          <input type="text" placeholder="Telefónne číslo" name="number">
+          <input type="email" placeholder="email@email.sk" name="email" required>
+        </div>
+        <div class="info">
+          <textarea name="textarea" placeholder="Napíšte správu ..."></textarea>
+        </div>
+        <button class="reservation-header-button" style="margin-top: 20px;"><span>Poslať</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="adress-container">
+    <div class="adress">
+      <div class="adress-h1">
+        <p>Adresa našej chaty</p>
+      </div>
+      <div class="adress-regular-text">
+        <p>Preskúmajte adresu našej chatky, ktorá sa nachádza v krásnej lokalite, kde je ticho a pokoj.</p>
+      </div>
+      <div>
+        <button class="adress-button reservation-header-button" style="margin-top: 15px;"><span>Adresa</span></button>
+      </div>
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81246.56534133783!2d17.0584!3d48.1486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8936d8b64a29%3A0x400f7d1c6971d60!2sBratislava!5e0!3m2!1ssk!2ssk!4v1697388293000"
+          width="100%"
+          height="500"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+  
+<section>
+  <footer>
+    <div class="footer-logo">
+      <img class="logo" src="loga/logo.svg" alt="">
+    </div>
+    <div class="footer-contact-container">
+        <h3>Jakub Barnáš</h3>
+        <h4><span>✆</span>+421 949 031 295</h4>
+        <h4><span style="font-weight: 300;">@</span>barnas.jakub@gmail.com</h4>
+    </div>
+    <div class="footer-menu-container">
+      <div class="footer-menu">
+        <a href="gallery.html" class="gallery-footer">Galéria</a>
+        <a class="contact-footer" onclick="translateX()">Kontakt</a>
+        <a class="reservation-footer">Rezervácia ↗</a>
+      </div>
+      <div class="footer-menu">
+        <a href="" class="airbnb-footer">Airbnb</a>
+        <a href="" class="booking-footer">Booking</a>
+        <a href="" class="adress-footer">Adresa</a>
+      </div>
+    </div>
+  </footer>
+</section>
+<script>
+  function showMenu() {
+    document.getElementById("show-menu").classList.add("show");
+    document.getElementById("rotate").classList.remove("rotate");
+      }
+  function closeMenu() {
+    document.getElementById("show-menu").classList.remove("show");
+      }
+  function rotate() {
+    document.getElementById("rotate").classList.add("rotate");
+  }
+  function generateImages() {
+    const generate = document.getElementById("for-1");
+    generate.innerHTML= "";
+    for(let i=21; i <= 40; i++){
+      generate.innerHTML +=`<img class="gallery-imgs" src="gallery/img-${i}.jpg" style="width: 400px;">`;
+    }
+    for(let i=21; i <= 40; i++){
+      generate.innerHTML +=`<img class="gallery-imgs" src="gallery/img-${i}.jpg" style="width: 400px;">`;
+    }
+  }
+  function generateImages2() {
+    const generate = document.getElementById("for-2");
+    generate.innerHTML= "";
+    for(let i=1; i <= 20; i++){
+      generate.innerHTML +=`<img class="gallery-imgs" src="gallery/img-${i}.jpg">`;
+    }
+    for(let i=1; i <= 20; i++){
+      generate.innerHTML +=`<img class="gallery-imgs" src="gallery/img-${i}.jpg">`;
+    }
+  }
+  function generateImages3() {
+    const generate = document.getElementById("for-3");
+    generate.innerHTML= "";
+    for(let i=41; i <= 60; i++){
+      generate.innerHTML +=`<img class="gallery-imgs" src="gallery/img-${i}.jpg" style="width: 300px;">`;
+    }
+    for(let i=41; i <= 60; i++){
+      generate.innerHTML +=`<img class="gallery-imgs" src="gallery/img-${i}.jpg" style="width: 300px;">`;
+    }
+  }
+  window.addEventListener('load', generateImages);
+  window.addEventListener('load', generateImages2);
+  window.addEventListener('load', generateImages3);
+
+
+  for(let i=1; i < 4; i++){
+    const openGallery = document.getElementById(`for-${i}`);
+    openGallery.addEventListener('click', () => {
+    window.location.href = "gallery.html";
+  });
+  }
+ 
+ const boxes = document.querySelectorAll('section');
+
+  function checkVisibility() {
+    boxes.forEach(box => {
+      const rect = box.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        box.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('DOMContentLoaded', checkVisibility);
+  window.addEventListener('load', checkVisibility);
+
+  function translateX() {
+  const translateX = document.querySelector(".show-contact");
+  translateX.classList.add("active");
+  document.querySelector(".symbol-x").classList.remove("rotation");
+}
+  function closeContact() {
+    const close = document.querySelector(".show-contact");
+    close.classList.remove("active");
+  }
+  function rotationX() {
+  document.querySelector(".symbol-x").classList.add("rotation");
+}
+</script>
+</body>
+</html>

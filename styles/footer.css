@@ -1,0 +1,102 @@
+footer{
+  background-color: white;
+  height: 200px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  gap: 10%;
+  border-top: 1px lightgray solid;
+  width: 100%;
+}
+.footer-logo{
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.footer-menu{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 20px;
+}
+.footer-menu-container{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-right: 200px;
+  width: 500px;
+}
+.gallery-footer, .contact-footer, .reservation-footer{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.airbnb-footer, .booking-footer, .adress-footer{
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 768px){
+  .footer-logo{
+    margin-left: 20px;
+    margin-top: 75px;
+  }
+  .footer-menu-container{
+    margin-right: 30px;
+    gap: 10%;
+  }
+  .footer-menu a{
+    font-size: 10px;
+  }
+  .footer-menu{
+    width: 70px;
+  }
+  footer .footer-contact-container {
+    display: none !important;
+    gap: 5%;
+  }
+  
+}
+@media (max-width: 1024px){
+  footer .footer-contact-container {
+    display: none !important;
+    gap: 5%;
+  }
+}
+.footer-signature{
+  height: 20px;
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signature{
+  font-size: 14px;
+  font-style: italic;
+}
+footer a:hover {
+  color: rgb(115, 115, 115);
+}
+.footer-contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-contact-container h3{
+  margin: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-contact-container h4{
+  margin: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-contact-container span{
+  font-size: 30px;
+}
